@@ -1,0 +1,11 @@
+<table *ngIf="dataLoaded==true" class="table">
+    <thead>
+        <tr>
+            <th>Müşteri</th>        
+        </tr>
+    </thead>
+    <tr *ngFor="let customer of customers">
+        <td>{{customer.companyName}}</td>
+      
+    </tr>
+</table>
