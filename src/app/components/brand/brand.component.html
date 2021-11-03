@@ -1,14 +1,19 @@
 <div *ngIf="dataLoaded==false" class="spinner-border text-danger" role="status">
     <span class="visually-hidden">Loading...</span>
 </div>
-<table *ngIf="dataLoaded==true" class="table">
+<table *ngIf="dataLoaded==true" class="list-group">
     <thead>
-        <tr>
+        <tr class="list-group-item">
             <th>Marka</th>        
         </tr>
     </thead>
-    <tr *ngFor="let brand of brands">
+    <tr *ngFor="let brand of brands" class="list-group-item">
         <td>{{brand.brandName}}</td>
       
-    </tr>
+    <!-- </tr>
+    <ul class="list-group">
+        <li *ngFor="let brand of brands"></li>
+    </ul> -->
+
+   
 </table>

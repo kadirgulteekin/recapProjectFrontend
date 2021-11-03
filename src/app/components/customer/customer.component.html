@@ -1,10 +1,10 @@
-<table *ngIf="dataLoaded==true" class="table">
+<table *ngIf="dataLoaded==true" class="list-group">
     <thead>
-        <tr>
+        <tr class="list-group-item" style="margin-top:25px;">
             <th>Müşteri</th>        
         </tr>
     </thead>
-    <tr *ngFor="let customer of customers">
+    <tr *ngFor="let customer of customers" class="list-group-item">
         <td>{{customer.companyName}}</td>
       
     </tr>
