@@ -4,7 +4,7 @@
             <th>Müşteri</th>        
         </tr>
     </thead>
-    <tr *ngFor="let customer of customers" class="list-group-item">
+    <tr (click)="setCurrentCustomer(customer)" *ngFor="let customer of customers" [class]="getCurrentCustomerClass(customer)">
         <td>{{customer.companyName}}</td>
       
     </tr>

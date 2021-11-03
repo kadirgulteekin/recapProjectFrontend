@@ -7,13 +7,9 @@
             <th>Marka</th>        
         </tr>
     </thead>
-    <tr *ngFor="let brand of brands" class="list-group-item">
+    <tr (click)="setCurrentBrand(brand)" routerLink="/cars/brand/{{brand.brandId}}" *ngFor="let brand of brands" [class]="getCurrentBrandClass(brand)">
         <td>{{brand.brandName}}</td>
-      
-    <!-- </tr>
-    <ul class="list-group">
-        <li *ngFor="let brand of brands"></li>
-    </ul> -->
-
    
 </table>
+
+<h5 *ngIf="currentBrand">{{currentBrand.brandName}} seçtiniz</h5>

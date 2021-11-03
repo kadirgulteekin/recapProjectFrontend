@@ -4,8 +4,7 @@
             <th>Renk</th>        
         </tr>
     </thead>
-    <tr *ngFor="let color of colors" class="list-group-item">
-        <td>{{color.colorName}}</td>
-      
+    <tr (click)="setCurrentColor(color)" *ngFor="let color of colors" [class]="getCurrentColorClass(color)">
+        <td>{{color.colorName}}</td>     
     </tr>
 </table>
