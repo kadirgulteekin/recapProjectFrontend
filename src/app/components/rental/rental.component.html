@@ -3,16 +3,14 @@
         <tr>
             <th>Müşteri Adı Soyadı</th>
             <th>Araç Marka</th>
-            <th>Kiralama Tarihi</th>
-            <th>Araç Teslim Tarihi</th>
+          
          
         </tr>
     </thead>
     <tr *ngFor="let rental of rentals">
         <td>{{rental.fullName}}</td>
         <td>{{rental.brandName}}</td>
-        <td>{{rental.rentDate}}</td>
-        <td>{{rental.returnDate}}</td>
+        
        
     </tr>
 </table>

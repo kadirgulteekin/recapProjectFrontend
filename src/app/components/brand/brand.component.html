@@ -7,9 +7,9 @@
             <th>Marka</th>        
         </tr>
     </thead>
-    <tr (click)="setCurrentBrand(brand)" routerLink="/cars/brand/{{brand.brandId}}" *ngFor="let brand of brands" [class]="getCurrentBrandClass(brand)">
-        <td>{{brand.brandName}}</td>
+    <tr (click)="setCurrentBrand(brand)" routerLink="/cardetails/brand/{{brand.brandId}}" *ngFor="let brand of brands" [class]="getCurrentBrandClass(brand)">
+        <td>{{brand.brandName}}</td></tr>
    
 </table>
 
-<h5 *ngIf="currentBrand">{{currentBrand.brandName}} seçtiniz</h5>
+<h5 *ngIf="currentBrand">{{currentBrand.brandName}},{{currentBrand.brandId}} seçtiniz</h5>
