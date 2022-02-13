@@ -9,6 +9,15 @@ import { NaviComponent } from './components/navi/navi.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { ColorComponent } from './components/color/color.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { VatAddedPipe } from './pipes/vat-added.pipe';
+import { FormsModule } from '@angular/forms';
+
+
+
+
+
+
+
 
 
 
@@ -21,12 +30,20 @@ import { RentalComponent } from './components/rental/rental.component';
     CustomerComponent,
     ColorComponent,
     RentalComponent,
+    VatAddedPipe,
+    
+
+
+
+    
+
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -51,6 +51,7 @@ export class CarComponent implements OnInit {
     this.getBrands();
     this.getColors();
     this.getRentals();
+  
   }
 
 
@@ -72,6 +73,7 @@ export class CarComponent implements OnInit {
   getBrands() {
     this.brandService.getBrands().subscribe((response) => {
       this.brands = response.data;
+      this.dataLoaded=true;
     });
   }
 
