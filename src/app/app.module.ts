@@ -11,6 +11,7 @@ import { ColorComponent } from './components/color/color.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FormsModule } from '@angular/forms';
+import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 
 
 
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     ColorComponent,
     RentalComponent,
     VatAddedPipe,
+    FilterPipePipe,
     
 
 

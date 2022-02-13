@@ -23,7 +23,7 @@
             <th>Model</th>
         </tr>
     </thead>
-    <tr *ngFor="let car of cardetails">
+    <tr *ngFor="let car of cardetails |filterPipe:filterText">
         <td>{{car.description}}</td>
         <td>{{car.brandName |uppercase}}</td>
         <td>{{car.colorName}}</td>
