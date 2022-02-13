@@ -21,14 +21,20 @@
             <th>Günlük Fiyat</th>
             <th>Kdv'li Fiyat</th>
             <th>Model</th>
+            <th></th>
         </tr>
     </thead>
-    <tr *ngFor="let car of cardetails |filterPipe:filterText">
-        <td>{{car.description}}</td>
-        <td>{{car.brandName |uppercase}}</td>
-        <td>{{car.colorName}}</td>
-        <td>{{car.dailyPrice |currency}}</td>
-        <td>{{car.dailyPrice |vatAdded:18 |currency}}</td>
-        <td>{{car.modelYear}}</td> 
-    </tr>
+    <tbody>
+
+        <tr *ngFor="let car of cardetails |filterPipe:filterText">
+            <td>{{car.description}}</td>
+            <td>{{car.brandName |uppercase}}</td>
+            <td>{{car.colorName}}</td>
+            <td>{{car.dailyPrice |currency}}</td>
+            <td>{{car.dailyPrice |vatAdded:18 |currency}}</td>
+            <td>{{car.modelYear}}</td>
+            <td><button (click)="addToCart(car)" class="btn btn-success">Sepete Ekle</button></td> 
+        </tr>
+    </tbody>
+   
 </table>

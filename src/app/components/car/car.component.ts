@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Brand } from 'src/app/models/brand';
 import { CarDetails } from 'src/app/models/cardetails';
 import { Color } from 'src/app/models/color';
@@ -34,7 +35,8 @@ export class CarComponent implements OnInit {
     private activatedRoute:ActivatedRoute,
     private brandService: BrandService,
     private colorService: ColorService,
-    private rentalService:RentalService
+    private rentalService:RentalService,
+    private toastrService:ToastrService
     ) { }
 
   ngOnInit(): void {
@@ -143,6 +145,12 @@ export class CarComponent implements OnInit {
     this.rentalService.getRentals().subscribe(response=>{
       this.rentals = response.data;
     })
+  }
+
+
+  addToCart(cardetails:CarDetails){
+    this.toastrService.success("Sepete Eklendi",cardetails.description)
+
   }
 
 
