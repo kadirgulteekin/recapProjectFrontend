@@ -7,6 +7,7 @@ import { Color } from 'src/app/models/color';
 import { Rental } from 'src/app/models/rental';
 import { BrandService } from 'src/app/services/brand.service';
 import { CarService } from 'src/app/services/car.service';
+import { CartService } from 'src/app/services/cart.service';
 import { ColorService } from 'src/app/services/color.service';
 import { RentalService } from 'src/app/services/rentals.service';
 
@@ -36,7 +37,8 @@ export class CarComponent implements OnInit {
     private brandService: BrandService,
     private colorService: ColorService,
     private rentalService:RentalService,
-    private toastrService:ToastrService
+    private toastrService:ToastrService,
+    private cartService:CartService
     ) { }
 
   ngOnInit(): void {
@@ -153,6 +155,7 @@ export class CarComponent implements OnInit {
       this.toastrService.error("Hata","Bu araç sepete eklenemez!")
     }else{
       this.toastrService.success("Sepete Eklendi",cardetails.description)
+      this.cartService.addToCart(cardetails);
     }
     
   }
