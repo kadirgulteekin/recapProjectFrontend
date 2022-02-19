@@ -14,11 +14,12 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ToastrModule } from 'ngx-toastr';
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 
 
 
 
-
+  
 
 
 
@@ -35,6 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
     RentalComponent,
     VatAddedPipe,
     FilterPipePipe,
+    CartSummaryComponent,
     
 
 

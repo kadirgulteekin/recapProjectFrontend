@@ -149,8 +149,12 @@ export class CarComponent implements OnInit {
 
 
   addToCart(cardetails:CarDetails){
-    this.toastrService.success("Sepete Eklendi",cardetails.description)
-
+    if(cardetails.carId==8007){
+      this.toastrService.error("Hata","Bu araç sepete eklenemez!")
+    }else{
+      this.toastrService.success("Sepete Eklendi",cardetails.description)
+    }
+    
   }
 
 

@@ -53,4 +53,3 @@ export class CarService {
     return this.httpClient.get<ListResponseModel<CarDetails>>(newPath);
   }
 }
-// cars/getcarsbybrand?brandid=3002
