@@ -7,6 +7,7 @@ const routes: Routes = [
   {path:"",pathMatch:"full",component:CarComponent},
   {path:"cardetails",component:CarComponent},
   {path:"cardetails/brand/:brandId",component:CarComponent},
+  {path:"cardetails/color/:colorId",component:CarComponent},
   {path:"",component:RentalComponent},
  
 ];

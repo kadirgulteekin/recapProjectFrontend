@@ -15,6 +15,8 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ToastrModule } from 'ngx-toastr';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+import { FilterBrandPipe } from './pipes/filter-brand.pipe';
+import { FilterColorPipe } from './pipes/filter-color.pipe';
 
 
 
@@ -37,6 +39,8 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
     VatAddedPipe,
     FilterPipePipe,
     CartSummaryComponent,
+    FilterBrandPipe,
+    FilterColorPipe,
     
 
 
